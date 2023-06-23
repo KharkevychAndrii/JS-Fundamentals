@@ -55,44 +55,17 @@ else if (hour < 23 && hour >= 17) alert(`Доброго вечора`);
 
 
 switch (hour) {
-    case 23: alert(`Доброї ночі`); break;
-    case 1 : alert(`Доброї ночі`); break;
-    case 2 : alert(`Доброї ночі`); break;
-    case 3 : alert(`Доброї ночі`); break;
-    case 4 : alert(`Доброї ночі`); break;
-    case 5 : alert(`Доброго ранку`); break;
-    case 6 : alert(`Доброго ранку`); break;
-    case 7 : alert(`Доброго ранку`); break;
-    case 8 : alert(`Доброго ранку`); break;
-    case 9 : alert(`Доброго ранку`); break;
-    case 10: alert(`Доброго ранку`); break;
-    case 11: alert(`Доброго дня`); break;
-    case 12: alert(`Доброго дня`); break;
-    case 13: alert(`Доброго дня`); break;
-    case 14: alert(`Доброго дня`); break;
-    case 15: alert(`Доброго дня`); break;
-    case 16: alert(`Доброго дня`); break;
-    case 17: alert(`Доброго вечора`); break;
-    case 18: alert(`Доброго вечора`); break;
-    case 19: alert(`Доброго вечора`); break;
-    case 20: alert(`Доброго вечора`); break;
-    case 21: alert(`Доброго вечора`); break;
-    case 22: alert(`Доброго вечора`); break;
+    case 23: case 1 : case 2 : case 3 : case 4 :
+      alert(`Доброї ночі`); break;
+    case 5 : case 6 : case 7 : case 8 : case 9 : case 10: 
+    alert(`Доброго ранку`); break;
+    case 11: case 12: case 13: case 14: case 15: case 16: 
+    alert(`Доброго дня`); break;
+    case 17: case 18: case 19: case 20: case 21: case 22: 
+    alert(`Доброго вечора`); break;
 }
     
 // Task 5
-/*
-20
-//глобальн2 змінн1
-/2
-reduce 
-Filter 
-6
-array.forEach(element => {
-    
- });
- 
-*/
 
   let arr = [4, 5, 2, 1, 6, 5, 3, 5, 2, 5];
   let index1 = arr.filter(item => item == 1);
@@ -115,33 +88,28 @@ array.forEach(element => {
   if (index5Length > maxLength) (maxLength = index5Length);
   if (index6Length > maxLength) (maxLength = index6Length);
   let data = [];
+  let copyArr = [];
+  copyArr = arr.slice(0);
+  copyArr = copyArr.sort((a, b) => a - b);
   if (index1Length === maxLength) {
-    arr.splice(3, 1);
-    data = [1];
-};
+    data = copyArr.slice(0, maxLength);
+  };
   if (index2Length === maxLength) {
-    arr.splice(2, 1);
-    arr.splice(8, 1);
-    data = [2,2]
-};
+  data = copyArr.slice(index1Length, index1Length + maxLength);
+  };
   if (index3Length === maxLength) {
-    arr.splice(6, 1);
-    data = [3];
-};
+    data = copyArr.slice(index1Length + index2Length, index1Length + index2Length+ maxLength);
+  };
   if (index4Length === maxLength) {
-    arr.splice(0, 1);
-    data = [4];
-};
+    data = copyArr.slice(index1Length + index2Length + index3Length, index1Length + index2Length + index3Length + maxLength);
+  };
   if (index5Length === maxLength) {
-    arr.splice(1, 1);
-    arr.splice(4, 1);
-    arr.splice(5, 1);
-    arr.splice(6, 1);
-    data = [5,5,5,5]
-};
+    data = copyArr.slice(index1Length + index1Length + index2Length + index3Length, index1Length + index1Length + index2Length + index3Length + maxLength);
+  };
   if (index6Length === maxLength) {
-    arr.splice(4, 1);
-    data = [6]
-};
-  console.log(arr) // [4, 2, 1, 6, 3, 2]
+    data = copyArr.slice(index5Length + index4Length + index1Length + index2Length + index3Length, index5Length + index4Length + index1Length + index2Length + index3Length + maxLength);
+  };
+  let z = data[0];
+  console.log(arr.filter((x => x != z)));// [4, 2, 1, 6, 3, 2]
+
 // Task 6
