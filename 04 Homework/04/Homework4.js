@@ -31,7 +31,7 @@
         if (age < 18 || age > 70) {
             throw new RangeError(`Age should be in range from 18 to 70`);
         }
-        if (status !== `адмін`, status !== `адмін`, status !== `адмін`) {
+        if (status !== `адмін` && status !== `модератор` && status !== `користувач`) {
             throw new EvalError(`Status incorrect`);
         }
         alert(`You have acces to film`);
