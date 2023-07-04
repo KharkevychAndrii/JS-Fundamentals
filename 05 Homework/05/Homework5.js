@@ -135,33 +135,25 @@ class Worker {
   }
 }
 
-// Створення екземплярів класу Worker
 const worker1 = new Worker('John Smith', 50, 20);
 const worker2 = new Worker('Alice Johnson', 70, 15);
 const worker3 = new Worker('Bob Williams', 60, 25);
 
-// Виклик методів для виведення зарплати
 worker1.showSalary();
 worker2.showSalary();
 worker3.showSalary();
 
-// Виклик методу для виведення зарплати з урахуванням досвіду
 worker1.showSalaryWithExperience();
 
-// Встановлення і виведення значення досвіду
 worker1.experience = 1.5;
 console.log(`Experience of ${worker1.fullName}: ${worker1.experience}`);
 
-// Виведення зарплати з новим досвідом
 worker1.showSalaryWithExperience();
 
-// Масив з працівниками
 const workers = [worker1, worker2, worker3];
 
-// Сортування за зарплатою
 const sortedWorkers = Worker.sortBySalary(workers);
 
-// Виведення результатів сортування
 sortedWorkers.forEach((worker) => {
   const salary = worker.dayRate * worker.workingDays * worker.experience;
   console.log(`${worker.fullName}: ${salary}`);
