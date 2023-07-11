@@ -471,3 +471,48 @@ body{
         padding: 20px;
     }
 }
+
+.quantities {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #eee;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.quantity.active {
+  background-color: var(--primary);
+  color: #ffffff;
+  transition: .5s;
+}
+.delivery {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+.del {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #eee;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+  }
