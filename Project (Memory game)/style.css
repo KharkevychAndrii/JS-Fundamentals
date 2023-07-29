@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('https://drive.google.com/uc?export=view&id=1vI0dsLCXxOG4zHB8DvAlXNfLEsT79HVp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100px;
+  background-image: url('https://drive.google.com/uc?export=view&id=1kAJG4qRt3hRMz4bVw6J1PAFy8b_9LzWS');
+  transition: transform 0.5s ease;
+}
+
+.card.flipped[data-value='1'] {
+  background-image: url('https://drive.google.com/uc?export=view&id=1WjrHFrHJXbWFUd38n-9y0rpwMzkYXtAg');
+  transform: rotateY(180deg);
+}
+
+.card.flipped[data-value='2'] {
+  background-image: url('https://drive.google.com/uc?export=view&id=1-QI60PMYj8GPXYHg8pFqRbCxI-1BIYPB');
+  transform: rotateY(180deg);
+}
+
+.card.flipped[data-value='3'] {
+  background-image: url('https://drive.google.com/uc?export=view&id=1IHUazLJqWvCwWnr7vWFNd2-ldNaiDfUK');
+  transform: rotateY(180deg);
+}
+
+.card.flipped[data-value='4'] {
+  background-image: url('https://drive.google.com/uc?export=view&id=1vzwq9H49lcF8SWl1gzIpuk1gyvYzJFpH');
+  transform: rotateY(180deg);
+}
+
+.card.flipped[data-value='5'] {
+  background-image: url('https://drive.google.com/uc?export=view&id=1sjzNcH7jM8YwEq-TJTZ7mQgwDM38k2vJ');
+  transform: rotateY(180deg);
+}
+
+.card.flipped[data-value='6'] {
+  background-image: url('https://drive.google.com/uc?export=view&id=19fkWlWGP3X_D0ok6CUGHssFNz_2ywVaS');
+  transform: rotateY(180deg);
+}
+
+.card.flipped[data-value='7'] {
+  background-image: url('https://drive.google.com/uc?export=view&id=15ScSiVRjrNV7ytSiTtvVVF2rUUySzHBz');
+  transform: rotateY(180deg);
+}
+
+.card.flipped[data-value='8'] {
+  background-image: url('https://drive.google.com/uc?export=view&id=1ZeArDmIdz7dvdD2gbiB7v0qMb-gL_ZJK');
+  transform: rotateY(180deg);
+}
+
+#start-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 30px;
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  background-color: darkgreen;
+}
